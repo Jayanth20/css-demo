@@ -18,3 +18,16 @@ body{
    cursor: pointer;
    transition: 0.5s;
  }
+ h2 {
+   font-size: 30px;
+   text-align: center;
+   text-transform: uppercase;
+   color: black;
+ }
+
+ p {
+   text-indent: 50px;
+   color: #333;
+   text-align: justify;
+   letter-spacing: 3px;
+ }

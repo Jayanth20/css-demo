@@ -21,3 +21,15 @@ body{
    cursor: pointer;
    transition: 0.5s;
  }
+ h2 {
+   font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: red;
+}
+
+p {
+  text-indent: 50px;
+  text-align: justify;
+  letter-spacing: 3px;
+}
