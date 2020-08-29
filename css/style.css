@@ -1,5 +1,7 @@
 body{
   background-color: lightblue;
+  font-family: serif;
+  font-style: italic;
 }
  button{
    padding: 10px 10px;
