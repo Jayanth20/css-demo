@@ -10,9 +10,11 @@
     <h2>JavaScript Variables practice</h2>
     <p id="paragraph"></p>
     <script>
-      var a = "hello";
-      var b = "world";
-      document.getElementById("paragraph").innerHTML = a +" "+ b;
+      var array = [1,2,3,4,5];
+      var a = array[2];
+      var b = a.toString();
+      console.log(typeof b);
+      document.write(typeof b);
     </script>
   </body>
 </html>
