@@ -6,22 +6,28 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-
-<h2>JavaScript Practice</h2>
-<p>Matching string practice; search for "javascript" in a string.</p>
-
-<button onclick="myFunction()">Search for pattern</button>
-
-<p id="output"></p>
-
-<script>
-function myFunction() {
-  var str = "Learn JavaScript";
-  var patt = /javascript/i;
-  var result = str.match(patt);
-  document.getElementById("output").innerHTML = result;
-}
-</script>
+    <h2>JavaScript Practice</h2>
+    <p id="output"></p>
+    <script>
+      var a = Math.pow(7, 2);
+      document.write("2nd power of 7: " + a);
+      var b = Math.sqrt(100);
+      document.write("<br>Square root of 100: " + b);
+      var c = Math.abs(-12);
+      document.write("<br>Absolute value of -12: " + c);
+      var b = Math.sqrt(100);
+      document.write("<br>Square root of 100: " + b);
+      var d = 13.8;
+      document.write('<br>Random number:' + d);
+      var e = Math.ceil(d);
+      var f = Math.round(d);
+      var g = Math.floor(d);
+      var h = Math.cos(0*d/180);
+      document.write("<br>Ceil Value: " + e);
+      document.write("<br>Rounded value: " + f);
+      document.write("<br>Floor value: " + g);
+      document.write("<br>Trigonometric Function: " + h);
+    </script>
 
 </body>
 </html>
