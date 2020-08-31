@@ -6,18 +6,22 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <h2>JavaScript practice</h2>
-    <p id="output"></p>
-    <input type="submit" value="Open Activity" onclick="myFunc()">
-    <script>
-      var a = product(10, 20);
-      document.getElementById("output").innerHTML = a;
-      function product(m,n){
-        return m*n;
-      }
-      function myFunc() {
-        window.open("https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters");
-      }
-    </script>
-  </body>
+
+<h2>JavaScript Practice</h2>
+<p>Matching string practice; search for "javascript" in a string.</p>
+
+<button onclick="myFunction()">Search for pattern</button>
+
+<p id="output"></p>
+
+<script>
+function myFunction() {
+  var str = "Learn JavaScript";
+  var patt = /javascript/i;
+  var result = str.match(patt);
+  document.getElementById("output").innerHTML = result;
+}
+</script>
+
+</body>
 </html>
