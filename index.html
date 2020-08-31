@@ -4,17 +4,20 @@
     <meta charset="utf-8">
     <title>JS DEMO</title>
     <link rel="stylesheet" href="css/style.css">
-     <script src="js/script.js"></script>
   </head>
   <body>
-    <h2>JavaScript Variables practice</h2>
-    <p id="paragraph"></p>
+    <h2>JavaScript practice</h2>
+    <p id="output"></p>
+    <input type="submit" value="Open Activity" onclick="myFunc()">
     <script>
-      var array = [1,2,3,4,5];
-      var a = array[2];
-      var b = a.toString();
-      console.log(typeof b);
-      document.write(typeof b);
+      var a = product(10, 20);
+      document.getElementById("output").innerHTML = a;
+      function product(m,n){
+        return m*n;
+      }
+      function myFunc() {
+        window.open("https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters");
+      }
     </script>
   </body>
 </html>
