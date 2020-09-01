@@ -7,10 +7,13 @@
   </head>
   <body>
     <h2>JavaScript Practice</h2>
+    <button onclick="getDate()">Display Date</button>
     <p id="output"></p>
     <script>
-      var date = new Date();
-      console.log(date);
+      function getDate(){
+        var date = new Date();
+        document.getElementById("output").innerHTML=date;
+    }
     </script>
 
 </body>
