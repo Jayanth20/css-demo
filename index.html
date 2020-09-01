@@ -7,15 +7,27 @@
   </head>
   <body>
     <h2 onmouseover="myFunc()">JavaScript Practice</h2>
-    <button onclick="getDate()">Display Date</button>
+    <h4>Fibonacci Series</h4>
+    <label for="input">Enter the number</label>
+    <input type="number" id="input" required=required>
+    <button onclick="Fibonacci(document.getElementById('input').value)">Get Fibonacci Series</button>
     <p id="output"></p>
     <script>
-      function getDate(){
-        var date = new Date();
-        document.getElementById("output").innerHTML=date;
-      }
-      function myFunc(){
-        alert("Click below button to get date");
+      console.log(n);
+      function Fibonacci(n){
+        var x=0,y=1,z;
+        if(n >= 10 && n < 100){
+          for(var i = 0; i <= n; ++i){
+            console.log(x);
+            z = x+y;
+            x = y;
+            y = z;
+          }
+          return 0;
+        }
+        else{
+          alert("Enter number between 10-100")
+        }
       }
     </script>
 
