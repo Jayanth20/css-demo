@@ -9,24 +9,39 @@
     <h2 onmouseover="myFunc()">JavaScript Practice</h2>
     <h4>Fibonacci Series</h4>
     <label for="input">Enter the number</label>
-    <input type="number" id="input" required=required>
+    <input type="text" id="input" required=required>
     <button onclick="Fibonacci(document.getElementById('input').value)">Get Fibonacci Series</button>
     <p id="output"></p>
+    <p id="fib"></p>
     <script>
       console.log(n);
       function Fibonacci(n){
+        var msg, x;
+        msg = document.getElementById("output");
+        msg.innerHTML = "";
         var x=0,y=1,z;
-        if(n >= 10 && n < 100){
-          for(var i = 0; i <= n; ++i){
-            console.log(x);
-            z = x+y;
-            x = y;
-            y = z;
+        try{
+          if(n == ""){
+            throw "is empty";
           }
-          return 0;
+          else if(isNaN(n)){
+            throw "is not a number";
+          }
+          else if(n<10 || n > 100){
+            throw alert("Limit not matched\nEnter numbers between 10-100");
+          }
+          else if(n >= 10 && n < 100){
+            for(var i = 0; i <= n; ++i){
+              console.log(x);
+              z = x+y;
+              x = y;
+              y = z;
+            }
+            return 0;
+          }
         }
-        else{
-          alert("Enter number between 10-100")
+        catch(err){
+          msg.innerHTML = "Input " + err;
         }
       }
     </script>
