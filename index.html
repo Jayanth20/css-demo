@@ -4,48 +4,40 @@
     <meta charset="utf-8">
     <title>JS DEMO</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
-    <h2 onmouseover="myFunc()">JavaScript Practice</h2>
-    <h4>Fibonacci Series</h4>
-    <label for="input">Enter the number</label>
-    <input type="text" id="input" required=required>
-    <button onclick="Fibonacci(document.getElementById('input').value)">Get Fibonacci Series</button><br>
-    <a href="JavaScript.html">Next page</a>
-    <p id="output"></p>
-    <p id="fib"></p>
+    <h2>jQuery Double-click, Toggle, fade in/out</h2>
     <script>
-      console.log(n);
-      function Fibonacci(n){
-        var msg, x;
-        msg = document.getElementById("output");
-        msg.innerHTML = "";
-        var x=0,y=1,z;
-        try{
-          if(n == ""){
-            throw "is empty";
-          }
-          else if(isNaN(n)){
-            throw "is not a number";
-          }
-          else if(n<10 || n > 100){
-            throw alert("Limit not matched\nEnter numbers between 10-100");
-          }
-          else if(n >= 10 && n < 100){
-            for(var i = 0; i <= n; ++i){
-              console.log(x);
-              z = x+y;
-              x = y;
-              y = z;
-            }
-            return 0;
-          }
-        }
-        catch(err){
-          msg.innerHTML = "Input " + err;
-        }
-      }
+      $(document).ready(function() {
+          $("#tgl").click(function() {
+              $("#toggletext").toggle(1000);
+          });
+      });
+      $(document).ready(function(){
+        $("p").dblclick(function(){
+          alert("The line was double-clicked.");
+        });
+      });
+      $(document).ready(function(){
+        $("#fade").click(function(){
+          $("#div1").fadeToggle();
+          $("#div2").fadeToggle(1000);
+          $("#div3").fadeToggle(2000);
+        });
+      });
     </script>
-
+    <p id="toggletext">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <button id="tgl">Click to toggle</button>
+    <div id="div1">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    </div>
+    <div id="div2">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    </div>
+    <div id="div3">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    </div>
+    <button id="fade">Fade IN/OUT</button>
 </body>
 </html>
