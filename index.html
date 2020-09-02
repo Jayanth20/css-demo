@@ -26,6 +26,14 @@
           $("#div3").fadeToggle(2000);
         });
       });
+      $(document).ready(function(){
+        $("#get").click(function(){
+          $.get("test.txt", function(data,status){
+            $("#test").html(data);
+            alert(status);
+          })
+        });
+      });
     </script>
     <p id="toggletext">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     <button id="tgl">Click to toggle</button>
@@ -39,5 +47,7 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
     </div>
     <button id="fade">Fade IN/OUT</button>
+    <button id="get">HTTP GET</button>
+    <p id="test"></p>
 </body>
 </html>
